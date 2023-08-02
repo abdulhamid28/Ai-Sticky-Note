@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gpt/DataBase/firebase.dart';
 import 'package:flutter_gpt/Widgets/notescapsule.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:shimmer/shimmer.dart';
 
 class StickyNotes extends StatefulWidget {
@@ -63,17 +64,19 @@ class _StickyNotesState extends State<StickyNotes> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(
-                    child: CircularProgressIndicator(
-                  strokeWidth: 10,
-                  color: Color.fromRGBO(80, 88, 108, 1),
-                )),
+                //     child: CircularProgressIndicator(
+                //   strokeWidth: 10,
+                //   color: Color.fromRGBO(80, 88, 108, 1),
+                // )
+                  child: LoadingAnimationWidget.discreteCircle(color: Color.fromRGBO(80, 88, 108, 1), size: 35),
+                ),
                 SizedBox(
                   height: 10,
                 ),
                 Text(
-                  'Searching',
+                  'No saved notes :( ',
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 17,
                       fontWeight: FontWeight.w600,
                       color: Color.fromRGBO(80, 88, 108, 1)),
                 ),

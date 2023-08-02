@@ -5,9 +5,7 @@ enum Role { human, bot }
 
 class MessageBubble extends StatefulWidget {
   String text;
-
   Role type;
-
   String? aditionalPrompt;
 
   MessageBubble({required this.type, required this.text, this.aditionalPrompt});
@@ -35,7 +33,7 @@ class _MessageBubbleState extends State<MessageBubble> {
                   child: (widget.type == Role.bot)
                       ? Image.asset(
                           'Assets/Images/logo.png',
-                          color: Color.fromRGBO(80, 88, 108, 1) ,
+                          color: Color.fromRGBO(80, 88, 108, 1),
                           width: 40,
                           height: 40,
                         )
@@ -56,6 +54,7 @@ class _MessageBubbleState extends State<MessageBubble> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     color: Colors.white),
+                width: double.maxFinite,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -128,7 +127,6 @@ class _MessageBubbleState extends State<MessageBubble> {
                     ],
                   ),
                 ),
-                width: double.maxFinite,
               ),
             ),
           )
