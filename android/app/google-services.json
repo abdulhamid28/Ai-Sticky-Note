@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "289917811980",
+    "project_id": "ai-sticky-note",
+    "storage_bucket": "ai-sticky-note.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289917811980:android:36de41f1fdb1ed4a601d29",
+        "android_client_info": {
+          "package_name": "com.example.flutter_gpt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289917811980-rbq70qgi0tmgvmst7usrvrq1p9aajl1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARx5ROcCo1kOnbEG1P8ksjifjujDVTNc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289917811980-rbq70qgi0tmgvmst7usrvrq1p9aajl1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
