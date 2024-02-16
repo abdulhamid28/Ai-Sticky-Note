@@ -2,8 +2,13 @@ import 'dart:convert';
 import 'package:http/http.dart' as Http;
 
 class RequestResponse{
-  String ApiKey ='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';
-  String baseUrl='https://api.openai.com/v1/chat/completions';
+  String ApiKey =
+  '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';
+  //'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';     // todo : expired
+      //'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'; // todo : expired
+     // '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'; // todo : expired
+      //'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'; // todo : expired
+  String baseUrl='https://api.openai.com/v1/chat/completions'; // todo : expired
   
    ApiCallForChatGpt({required String promtptForGpt}) async {
      var response = await Http.post(     // request type is Http Post
@@ -44,10 +49,10 @@ class RequestResponse{
      if(response.statusCode==200){
          var RawData = jsonDecode(response.body.toString());
          String responseFromGpt = RawData['choices'][0]['message']['content'];
-         // print(responseFromGpt);
+          // print(responseFromGpt);
          return responseFromGpt;
      }else{
-       return 'Sorry we are currently facing this issue : ${response.statusCode}';
+       return 'Sorry we are currently facing this issue : ${response.body}';
      }
 
   }
